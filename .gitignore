@@ -1,0 +1,55 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Ignore development environment settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore virtual environment
+venv/
+.venv/
+env/
+ENV/
+# Mac and Linux virtual environments
+*env/
+*.venv/
+
+# Ignore database files
+*.sqlite3
+db.sqlite3
+
+# Ignore environment variables and sensitive data files
+*.env
+.env.*
+
+# Ignore static and media files if they are collected separately
+/staticfiles/
+/media/
+/static/
+
+# Ignore Django migration files, except for __init__.py
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Ignore configuration and log files for different IDEs and OS
+.DS_Store
+*.swp
+*.bak
+*.tmp
+Thumbs.db
+
+# Ignore Node.js dependencies (if used for frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
