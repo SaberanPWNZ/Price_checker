@@ -82,17 +82,18 @@ class User(AbstractBaseUser):
     updated_at = models.DateTimeField(auto_now=True)
     last_login = models.DateTimeField(null=True, blank=True)
 
+    class Meta:
+        verbose_name = "Користувач"
+        verbose_name_plural = "Користувачі"
+        ordering = ["first_name", "last_name"]
+        unique_together = ("telegram_id", "user_phone")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['telegram_id']
 
     objects = CustomUserManager()
 
-    class Meta:
-        verbose_name = "User"
-        verbose_name_plural = "Users"
-        ordering = ["first_name", "last_name"]
-        unique_together = ("telegram_id", "user_phone")
+
 
     def __str__(self):
         """Return a string representation of the user."""
