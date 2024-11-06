@@ -93,8 +93,6 @@ class User(AbstractBaseUser):
 
     objects = CustomUserManager()
 
-
-
     def __str__(self):
         """Return a string representation of the user."""
         return self.email
