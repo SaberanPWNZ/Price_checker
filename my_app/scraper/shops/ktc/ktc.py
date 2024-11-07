@@ -34,7 +34,7 @@ def start_ktc_xp_pen():
     return result
 
 
-if __name__ == "__main__":
-
-  print(start_ktc_wacom())
-  print(start_ktc_xp_pen())
+# if __name__ == "__main__":
+#
+#   print(start_ktc_wacom())
+#   print(start_ktc_xp_pen())

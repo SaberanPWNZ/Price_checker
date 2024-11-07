@@ -24,7 +24,7 @@ class BaseStore:
         self.cookies = cookies
         self.all_items = None
 
-    def load_items(self, container_locator, item_locator):
+    def load_items(self, container_locator=None, item_locator=None):
 
         self.soup.get(self.url)
         soup = self.soup.get_text()
