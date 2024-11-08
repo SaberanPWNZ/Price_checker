@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from django.conf import settings
 
-from scraper.shops.ktc.ktc_locators import KtcLocator
+
 from utillities.utillities import get_article_from_title, clean_price
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "price_checker.settings")
@@ -179,9 +179,3 @@ class Scraper:
         if not self.soup:
             raise ValueError("HTML-контент не загружен. Вызовите `get_text` сначала.")
 
-# if __name__ == "__main__":
-#     store = BaseStore(shop_url='https://ktc.ua/search/?mobile=0&q=wacom&t=df497d188f6e6a5b97c412a28d48fd2b')
-#     store.load_items(container_locator=KtcLocator.CATALOG_GOODS)
-#     partner_items = [{'article': 'CTL-4100K-N', 'price': 1111}]
-#     result = store.compare_data(partner_items_list=partner_items)
-#     print(result)

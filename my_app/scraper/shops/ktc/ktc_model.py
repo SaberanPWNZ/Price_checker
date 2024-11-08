@@ -1,4 +1,4 @@
-from items.models import Item
+
 from scraper.models import BaseStore, Scraper
 from scraper.shops.ktc.ktc_locators import KtcLocator
 
